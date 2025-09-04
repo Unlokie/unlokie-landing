@@ -6,6 +6,7 @@ import { ContactForm } from '@/components/ContactForm'
 
 export default function Home() {
   return (
+    <>
     <main>
       <Navigation />
       
@@ -496,5 +497,51 @@ export default function Home() {
         </div>
       </section>
     </main>
+
+    {/* Footer */}
+    <footer className="bg-gray-900 text-white py-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-3 gap-8">
+          <div>
+            <h3 className="text-xl font-semibold mb-4">Unlokie</h3>
+            <p className="text-gray-400">
+              Smart sports equipment sharing. Play anywhere, anytime.
+            </p>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-medium mb-4">Quick Links</h4>
+            <ul className="space-y-2">
+              <li><a href="#how-it-works" className="text-gray-400 hover:text-white transition-colors">How It Works</a></li>
+              <li><a href="#impact" className="text-gray-400 hover:text-white transition-colors">Impact</a></li>
+              <li><a href="#traction" className="text-gray-400 hover:text-white transition-colors">Traction</a></li>
+              <li><a href="#team" className="text-gray-400 hover:text-white transition-colors">Team</a></li>
+              <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-medium mb-4">Contact</h4>
+            <div className="space-y-2">
+              <p className="text-gray-400">
+                <a href="mailto:info@unlokie.com" className="hover:text-white transition-colors">
+                  info@unlokie.com
+                </a>
+              </p>
+              <p className="text-gray-400">
+                General inquiries and partnerships
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+          <p className="text-gray-400">
+            © 2024 Unlokie. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    </>
   )
 }

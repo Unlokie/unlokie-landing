@@ -47,60 +47,35 @@ export function ContactForm() {
     setIsSubmitting(true)
 
     try {
-      // Try Cloudflare Pages function first
-      let response;
+      // Use Formspree as the primary form handler
+      const formspreeEndpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT || 'https://formspree.io/f/mldejqgp'
       
-      try {
-        response = await fetch('/contact', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData)
+      const response = await fetch(formspreeEndpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          organization: formData.organization,
+          message: formData.message,
+          requestDeck: formData.requestDeck,
+          _replyto: formData.email,
+          _subject: `New Contact Form: ${formData.name} from ${formData.organization}`
         })
-        
-        if (response.ok) {
-          const result = await response.json()
-          if (result.success) {
-            setIsSubmitted(true)
-            return
-          }
-        }
-        
-        throw new Error('Cloudflare function failed')
-        
-      } catch (cfError) {
-        console.log('Cloudflare function unavailable, trying fallback...')
-        
-        // Fallback to Formspree or mailto
-        const fallbackEndpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT || 'https://formspree.io/f/mldejqgp' // Replace with your Formspree ID
-        
-        response = await fetch(fallbackEndpoint, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            name: formData.name,
-            email: formData.email,
-            organization: formData.organization,
-            message: formData.message,
-            requestDeck: formData.requestDeck,
-            _replyto: formData.email,
-            _subject: `New Contact Form: ${formData.name} from ${formData.organization}`
-          })
-        })
-        
-        if (!response.ok) {
-          throw new Error('Both primary and fallback form submission failed')
-        }
+      })
+      
+      if (!response.ok) {
+        throw new Error('Form submission failed')
       }
       
       setIsSubmitted(true)
       
     } catch (error) {
       console.error('Form submission error:', error)
-      alert('There was an error submitting the form. Please try again or contact us directly at forms@unlokie.com')
+      alert('There was an error submitting the form. Please try again or contact us directly at info@unlokie.com')
     } finally {
       setIsSubmitting(false)
     }
