@@ -20,7 +20,7 @@ export function Analytics() {
     // Track button clicks
     document.addEventListener('click', (e) => {
       const target = e.target as HTMLElement
-      if (target.textContent?.includes('Request Pilot')) {
+      if (target.textContent?.includes('Request Pilot Program')) {
         trackConversion('pilot-request-click')
       }
       if (target.textContent?.includes('Investor Intro Deck')) {

@@ -38,7 +38,7 @@ export function Navigation() {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`flex justify-between items-center transition-all duration-300 ${
-          isScrolled ? 'h-16' : 'h-18 lg:h-20'
+          isScrolled ? 'h-16' : 'h-20 lg:h-24'
         }`}>
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -94,7 +94,7 @@ export function Navigation() {
                   : 'px-4 py-2 text-sm lg:px-5 lg:py-2.5'
               }`}
             >
-              Request Pilot
+              Request Pilot Program
             </Button>
           </div>
 
@@ -152,7 +152,7 @@ export function Navigation() {
               size="lg"
               className="w-full py-4 text-lg font-semibold shadow-lg"
             >
-              Request Pilot
+              Request Pilot Program
             </Button>
           </div>
         </div>

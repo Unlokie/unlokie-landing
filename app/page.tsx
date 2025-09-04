@@ -11,7 +11,8 @@ export default function Home() {
       <Navigation />
       
       {/* Hero Section */}
-      <section id="main-content" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-lightGray">
+      <section id="main-content" className="relative min-h-screen overflow-hidden bg-lightGray" style={{ paddingTop: '120px' }}>
+        <div className="flex items-center justify-center" style={{ minHeight: 'calc(100vh - 120px)' }}>
         <div className="absolute inset-0 bg-unlokie-gradient-subtle"></div>
         {/* Gradient fade to encourage scrolling */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white/20 to-transparent pointer-events-none"></div>
@@ -28,10 +29,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button size="lg" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
-                Request Pilot
-              </Button>
-              <Button variant="secondary" size="lg">
-                Investor Intro Deck
+                Request Pilot Program
               </Button>
             </div>
           </div>
@@ -57,10 +55,11 @@ export default function Home() {
             </div>
           </div>
         </div>
+        </div>
       </section>
 
       {/* Product Section */}
-      <section id="product" className="py-16 lg:py-24 bg-white">
+      <section id="product" className="pt-32 pb-16 lg:pb-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Product Overview */}
           <div className="text-center mb-16">
@@ -152,10 +151,7 @@ export default function Home() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">📍</span>
-                </div>
-                <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-semibold mx-auto mb-3">
+                <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-4">
                   1
                 </div>
                 <h4 className="text-xl font-semibold text-gray-900 mb-2">Find</h4>
@@ -163,10 +159,7 @@ export default function Home() {
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 bg-green-200 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">📱</span>
-                </div>
-                <div className="w-8 h-8 bg-green-700 text-white rounded-full flex items-center justify-center text-sm font-semibold mx-auto mb-3">
+                <div className="w-12 h-12 bg-green-700 text-white rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-4">
                   2
                 </div>
                 <h4 className="text-xl font-semibold text-gray-900 mb-2">Unlock</h4>
@@ -174,10 +167,7 @@ export default function Home() {
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">⚽</span>
-                </div>
-                <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-semibold mx-auto mb-3">
+                <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-4">
                   3
                 </div>
                 <h4 className="text-xl font-semibold text-gray-900 mb-2">Play</h4>
@@ -185,10 +175,7 @@ export default function Home() {
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 bg-green-200 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🔄</span>
-                </div>
-                <div className="w-8 h-8 bg-green-700 text-white rounded-full flex items-center justify-center text-sm font-semibold mx-auto mb-3">
+                <div className="w-12 h-12 bg-green-700 text-white rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-4">
                   4
                 </div>
                 <h4 className="text-xl font-semibold text-gray-900 mb-2">Return</h4>
@@ -197,78 +184,11 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Market Timing */}
-          <div className="bg-mintGreen/40 rounded-2xl p-8 lg:p-12">
-            <div className="text-center mb-12">
-              <h3 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4">
-                Perfect Timing
-              </h3>
-              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-                The convergence of trends creating unprecedented opportunity for shared sports equipment
-              </p>
-            </div>
-
-            <div className="grid lg:grid-cols-3 gap-8">
-              <div className="bg-white rounded-xl p-6">
-                <h4 className="text-xl font-semibold text-gray-900 mb-4">🌊 Market Trends</h4>
-                <ul className="space-y-3 text-lg text-gray-700">
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    Outdoor recreation boom post-pandemic
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    Sharing economy maturation
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    Community activation focus
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-white rounded-xl p-6">
-                <h4 className="text-xl font-semibold text-gray-900 mb-4">⚡ Tech Readiness</h4>
-                <ul className="space-y-3 text-lg text-gray-700">
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-green-700 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    Low-power IoT infrastructure
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-green-700 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    Ubiquitous smartphone adoption
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-green-700 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    Contactless payment normalization
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-white rounded-xl p-6">
-                <h4 className="text-xl font-semibold text-gray-900 mb-4">💰 Market Need</h4>
-                <ul className="space-y-3 text-lg text-gray-700">
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    Recreation budgets under pressure
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    Space utilization optimization need
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    Sustainability mandates increasing
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
       {/* Use Cases Section */}
-      <section id="use-cases" className="py-16 lg:py-24 bg-mint-gradient">
+      <section id="use-cases" className="pt-32 pb-16 lg:pb-24 bg-mint-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-semibold text-gray-900 mb-4">
@@ -362,7 +282,7 @@ export default function Home() {
       </section>
 
       {/* Impact Section */}
-      <section id="impact" className="py-16 lg:py-24 bg-mintGreen/30">
+      <section id="impact" className="pt-32 pb-16 lg:pb-24 bg-mintGreen/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-semibold text-gray-900 mb-4">
@@ -399,21 +319,11 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="text-center">
-            <div className="bg-white/60 rounded-xl p-8 max-w-2xl mx-auto shadow-sm backdrop-blur-sm">
-              <p className="text-lg text-gray-800 italic mb-4">
-                "Pilot data indicates significant increases in community engagement and equipment utilization rates."
-              </p>
-              <p className="text-sm text-gray-600">
-                (Details available under NDA)
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
       {/* Traction Section */}
-      <section id="traction" className="py-16 lg:py-24 bg-lightGray">
+      <section id="traction" className="pt-32 pb-16 lg:pb-24 bg-lightGray">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-semibold text-gray-900 mb-4">
@@ -444,21 +354,11 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="text-center">
-            <div className="bg-white/80 rounded-xl p-8 max-w-2xl mx-auto shadow-sm">
-              <p className="text-lg text-gray-800 mb-4">
-                "Interest from municipal recreation departments and sports facility operators across multiple markets."
-              </p>
-              <p className="text-sm text-gray-600">
-                Specific partnerships and metrics available under NDA
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
       {/* Team Section */}
-      <section id="team" className="py-16 lg:py-24 bg-sageGreen/20">
+      <section id="team" className="pt-32 pb-16 lg:pb-24 bg-sageGreen/20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-semibold text-gray-900 mb-4">
@@ -498,7 +398,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-16 lg:py-24 bg-white">
+      <section id="contact" className="pt-32 pb-16 lg:pb-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl sm:text-5xl font-semibold text-gray-900 mb-4">
