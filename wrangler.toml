@@ -1,0 +1,10 @@
+name = "unlokie-landing"
+compatibility_date = "2024-01-01"
+
+[env.production]
+name = "unlokie-landing"
+route = { pattern = "unlokie.com/*", zone_name = "unlokie.com" }
+
+[env.production.vars]
+NODE_ENV = "production"
+NEXT_PUBLIC_SITE_URL = "https://unlokie.com"
