@@ -104,7 +104,7 @@ export function ContactForm() {
             </svg>
           </div>
           <h3 className="text-2xl font-semibold text-charcoal mb-2">Thank you!</h3>
-          <p className="text-charcoal/80 mb-4">
+          <p className="text-lg text-charcoal/80 mb-4">
             We&apos;ve received your message and will follow up within 24 hours.
             {formData.requestDeck && ' We&apos;ll send you our investor intro deck under NDA if required.'}
           </p>
@@ -132,7 +132,7 @@ export function ContactForm() {
     <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-charcoal mb-2">
+          <label htmlFor="name" className="block text-base font-medium text-charcoal mb-2">
             Name *
           </label>
           <input
@@ -150,7 +150,7 @@ export function ContactForm() {
         </div>
 
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-charcoal mb-2">
+          <label htmlFor="email" className="block text-base font-medium text-charcoal mb-2">
             Email *
           </label>
           <input
@@ -169,7 +169,7 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="organization" className="block text-sm font-medium text-charcoal mb-2">
+        <label htmlFor="organization" className="block text-base font-medium text-charcoal mb-2">
           Organization *
         </label>
         <input
@@ -187,7 +187,7 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-charcoal mb-2">
+        <label htmlFor="message" className="block text-base font-medium text-charcoal mb-2">
           Message *
         </label>
         <textarea
@@ -213,7 +213,7 @@ export function ContactForm() {
           onChange={handleChange}
           className="mt-1 w-4 h-4 text-unlokieGreen border-gray-300 rounded focus:ring-unlokieGreen"
         />
-        <label htmlFor="requestDeck" className="text-sm text-charcoal">
+        <label htmlFor="requestDeck" className="text-base text-charcoal">
           Send me the investor intro deck (subject to NDA)
         </label>
       </div>
@@ -242,7 +242,7 @@ export function ContactForm() {
         </Button>
       </div>
 
-      <p className="text-xs text-charcoal/60 text-center">
+      <p className="text-sm text-charcoal/60 text-center">
         We&apos;ll only use your info to reply. No cookies. No tracking pixels.
         <br />
         Privacy-friendly analytics help us improve our site.
