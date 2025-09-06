@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { Button } from './Button'
+import { useScrollProgress } from '@/hooks/useParallax'
 
 const navigationItems = [
   { name: 'Product', href: '#product' },
@@ -15,6 +16,7 @@ const navigationItems = [
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const scrollProgress = useScrollProgress()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,8 +35,8 @@ export function Navigation() {
   return (
     <nav className={`fixed w-full z-40 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-white shadow-lg border-b border-gray-100' 
-        : 'bg-white/80 sm:bg-white backdrop-blur-sm'
+        ? 'bg-white/96 backdrop-blur-md shadow-sm border-b border-gray-100' 
+        : 'bg-white/90 backdrop-blur-md'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`flex justify-between items-center transition-all duration-300 ${
@@ -70,14 +72,14 @@ export function Navigation() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className={`relative text-gray-700 hover:text-green-600 font-semibold transition-all duration-300 group ${
+                  className={`relative text-charcoal hover:text-unlokieGreen font-medium transition-all duration-200 ease-out group ${
                     isScrolled 
                       ? 'px-2 py-2 text-sm' 
                       : 'px-3 py-2 text-sm lg:text-base'
                   }`}
                 >
                   {item.name}
-                  <span className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-green-500 to-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                  <span className="absolute inset-x-0 bottom-0 h-0.5 bg-unlokieGreen transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200 ease-out origin-left"></span>
                 </a>
               ))}
             </div>
@@ -131,6 +133,14 @@ export function Navigation() {
             </button>
           </div>
         </div>
+      </div>
+
+      {/* Scroll progress indicator */}
+      <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gray-200/50">
+        <div 
+          className="h-full bg-gradient-to-r from-unlokieGreen to-sageGreen transition-all duration-300 ease-out"
+          style={{ width: `${scrollProgress * 100}%` }}
+        />
       </div>
 
       {/* Mobile menu */}

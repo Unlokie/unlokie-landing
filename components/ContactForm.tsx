@@ -141,7 +141,7 @@ export function ContactForm() {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors ${
+            className={`w-full px-4 py-3 h-12 border rounded-md focus:ring-2 focus:ring-unlokieGreen focus:ring-opacity-25 focus:border-unlokieGreen transition-all duration-200 ease-out ${
               errors.name ? 'border-red-500' : 'border-gray-300'
             }`}
             placeholder="Your full name"
@@ -159,7 +159,7 @@ export function ContactForm() {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-unlokieGreen focus:border-unlokieGreen transition-colors ${
+            className={`w-full px-4 py-3 h-12 border rounded-md focus:ring-2 focus:ring-unlokieGreen focus:ring-opacity-25 focus:border-unlokieGreen transition-all duration-200 ease-out ${
               errors.email ? 'border-red-500' : 'border-gray-300'
             }`}
             placeholder="your.email@company.com"
@@ -178,7 +178,7 @@ export function ContactForm() {
           name="organization"
           value={formData.organization}
           onChange={handleChange}
-          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-unlokieGreen focus:border-unlokieGreen transition-colors ${
+          className={`w-full px-4 py-3 h-12 border rounded-md focus:ring-2 focus:ring-unlokieGreen focus:ring-opacity-25 focus:border-unlokieGreen transition-all duration-200 ease-out ${
             errors.organization ? 'border-red-500' : 'border-gray-300'
           }`}
           placeholder="Investment fund, incubator, or organization"
@@ -196,7 +196,7 @@ export function ContactForm() {
           value={formData.message}
           onChange={handleChange}
           rows={4}
-          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-unlokieGreen focus:border-unlokieGreen transition-colors resize-vertical ${
+          className={`w-full px-4 py-3 border rounded-md focus:ring-2 focus:ring-unlokieGreen focus:ring-opacity-25 focus:border-unlokieGreen transition-all duration-200 ease-out resize-vertical ${
             errors.message ? 'border-red-500' : 'border-gray-300'
           }`}
           placeholder="Tell us about your interest in Unlokie..."
