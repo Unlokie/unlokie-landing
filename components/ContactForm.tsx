@@ -105,8 +105,8 @@ export function ContactForm() {
           </div>
           <h3 className="text-2xl font-semibold text-charcoal mb-2">Thank you!</h3>
           <p className="text-lg text-charcoal/80 mb-4">
-            We&apos;ve received your message and will follow up within 24 hours.
-            {formData.requestDeck && ' We&apos;ll send you our investor intro deck under NDA if required.'}
+            We've received your message and will follow up within 24 hours.
+            {formData.requestDeck && " We'll send you our investor intro deck under NDA if required."}
           </p>
           <Button 
             variant="secondary" 
