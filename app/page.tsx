@@ -6,10 +6,6 @@ import { ContactForm } from '@/components/ContactForm'
 import { ScrollAnimation, StaggeredAnimation } from '@/components/ScrollAnimation'
 import { FloatingElements, GeometricShapes, GradientMesh } from '@/components/FloatingElements'
 
-// Fallback wrapper for cases where animations might not load
-function AnimationWrapper({ children, className = '' }: { children: React.ReactNode, className?: string }) {
-  return <div className={className}>{children}</div>
-}
 
 export default function Home() {
   return (

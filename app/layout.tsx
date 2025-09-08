@@ -73,9 +73,6 @@ export default function RootLayout({
         <meta name="color-scheme" content="light" />
       </head>
       <body className="antialiased">
-        <a href="#main-content" className="skip-link">
-          Skip to main content
-        </a>
         {children}
       </body>
     </html>

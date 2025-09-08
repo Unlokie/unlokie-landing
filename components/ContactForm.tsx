@@ -8,7 +8,6 @@ interface FormData {
   email: string
   organization: string
   message: string
-  requestDeck: boolean
 }
 
 export function ContactForm() {
@@ -17,7 +16,6 @@ export function ContactForm() {
     email: '',
     organization: '',
     message: '',
-    requestDeck: false,
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -61,7 +59,6 @@ export function ContactForm() {
           email: formData.email,
           organization: formData.organization,
           message: formData.message,
-          requestDeck: formData.requestDeck,
           _replyto: formData.email,
           _subject: `New Contact Form: ${formData.name} from ${formData.organization}`
         })
@@ -106,7 +103,6 @@ export function ContactForm() {
           <h3 className="text-2xl font-semibold text-charcoal mb-2">Thank you!</h3>
           <p className="text-lg text-charcoal/80 mb-4">
             We've received your message and will follow up within 24 hours.
-            {formData.requestDeck && " We'll send you our investor intro deck under NDA if required."}
           </p>
           <Button 
             variant="secondary" 
@@ -117,7 +113,6 @@ export function ContactForm() {
                 email: '',
                 organization: '',
                 message: '',
-                requestDeck: false,
               })
             }}
           >
@@ -204,7 +199,7 @@ export function ContactForm() {
         {errors.message && <p className="mt-1 text-sm text-red-500">{errors.message}</p>}
       </div>
 
-      <div className="flex items-start space-x-3">
+      {/* <div className="flex items-start space-x-3">
         <input
           type="checkbox"
           id="requestDeck"
@@ -216,7 +211,7 @@ export function ContactForm() {
         <label htmlFor="requestDeck" className="text-base text-charcoal">
           Send me the investor intro deck (subject to NDA)
         </label>
-      </div>
+      </div> */}
 
       <div className="flex flex-col sm:flex-row gap-4">
         <Button
@@ -234,7 +229,6 @@ export function ContactForm() {
             email: '',
             organization: '',
             message: '',
-            requestDeck: false,
           })}
           className="flex-1"
         >

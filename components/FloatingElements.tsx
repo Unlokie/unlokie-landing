@@ -107,7 +107,7 @@ export function GradientMesh() {
   return (
     <div className="absolute inset-0 -z-20">
       <div className="absolute inset-0 bg-animated-gradient bg-[length:400%_400%] animate-gradient-shift" />
-      {/* Additional gradient layers for more depth */}
+      {/* Additional gradient layers for depth */}
       <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-to-br from-unlokieGreen/15 to-transparent rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-gradient-to-tl from-sageGreen/12 to-transparent rounded-full blur-3xl" />
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/3 h-1/3 bg-gradient-to-r from-mintGreen/10 to-unlokieGreen/8 rounded-full blur-2xl animate-pulse-glow" />
