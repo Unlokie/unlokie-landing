@@ -45,7 +45,7 @@ export function ContactForm() {
     setIsSubmitting(true)
 
     try {
-      // Use Formspree as the primary form handler
+      // Use Formspree with forms@unlokie.com as the target email
       const formspreeEndpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT || 'https://formspree.io/f/mldejqgp'
       
       const response = await fetch(formspreeEndpoint, {
@@ -72,7 +72,7 @@ export function ContactForm() {
       
     } catch (error) {
       console.error('Form submission error:', error)
-      alert('There was an error submitting the form. Please try again or contact us directly at info@unlokie.com')
+      alert('There was an error submitting the form. Please try again or contact us directly at forms@unlokie.com')
     } finally {
       setIsSubmitting(false)
     }
@@ -224,15 +224,14 @@ export function ContactForm() {
         <Button
           type="button"
           variant="secondary"
-          onClick={() => setFormData({
-            name: '',
-            email: '',
-            organization: '',
-            message: '',
-          })}
+          onClick={() => {
+            const subject = encodeURIComponent(`${formData.name} from ${formData.organization}`)
+            const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nOrganization: ${formData.organization}\n\nMessage:\n${formData.message}`)
+            window.open(`mailto:forms@unlokie.com?subject=${subject}&body=${body}`, '_blank')
+          }}
           className="flex-1"
         >
-          Clear Form
+          Send via Email
         </Button>
       </div>
 

@@ -526,8 +526,8 @@ export default function Home() {
             <h4 className="text-lg font-medium text-charcoal mb-4">Contact</h4>
             <div className="space-y-3">
               <p className="text-slateGray">
-                <a href="mailto:info@unlokie.com" className="hover:text-unlokieGreen transition-colors duration-200">
-                  info@unlokie.com
+                <a href="mailto:forms@unlokie.com" className="hover:text-unlokieGreen transition-colors duration-200">
+                  forms@unlokie.com
                 </a>
               </p>
               <p className="text-coolGray text-sm">
