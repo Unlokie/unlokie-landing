@@ -67,9 +67,8 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" href="/Unlokie_favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/Unlokie_favicon.png" />
         <meta name="theme-color" content="#3CB878" />
         <meta name="color-scheme" content="light" />
       </head>

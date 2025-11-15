@@ -38,23 +38,23 @@ export default function Home() {
               <div className="mb-8 animate-fade-in">
                 <div className="inline-flex items-center px-4 py-2 rounded-pill bg-unlokieGreen/10 border border-unlokieGreen/20 mb-6">
                   <span className="w-2 h-2 bg-unlokieGreen rounded-full animate-pulse-glow mr-3"></span>
-                  <span className="text-sm font-medium text-unlokieGreen">Now in pilot phase</span>
+                  <span className="text-sm font-medium text-unlokieGreen">Pilot programs with Croatian cities in Q1 2026</span>
                 </div>
               </div>
               
               <div className="animate-slide-up">
                 <h1 className="text-hero font-bold text-charcoal mb-6 leading-tight tracking-tight">
-                  Smart sports gear,{' '}
                   <span className="text-unlokieGreen relative">
-                    right where you play.
-                    <div className="absolute -inset-1 bg-unlokieGreen/10 blur-lg rounded-lg -z-10 animate-pulse-glow"></div>
+                    Autonomous lockers{' '}
+                    <div className="absolute -inset-1 rounded-lg -z-10 animate-pulse-glow"></div>
                   </span>
+                  that make sports gear available anywhere
                 </h1>
               </div>
               
               <div className="animate-slide-up-delayed">
                 <p className="text-subhead text-slateGray mb-12 max-w-2xl mx-auto leading-relaxed">
-                  Unlokie places shared equipment in smart lockers at courts and fields—unlocked with a tap.
+                  24/7 access. No staff. No infrastructure, no construction needed.
                 </p>
               </div>
               
@@ -120,10 +120,10 @@ export default function Home() {
           <ScrollAnimation animation="fade-up">
             <div className="text-center mb-16">
               <h2 className="text-display font-bold text-charcoal mb-4">
-                Smart Lockers + Intuitive App
+                Deploy in Minutes. Activate Instantly.
               </h2>
               <p className="text-subhead text-slateGray max-w-2xl mx-auto">
-                The complete solution for shared sports equipment access
+                Wireless smart lockers + mobile app—the complete solution with zero infrastructure
               </p>
             </div>
           </ScrollAnimation>
@@ -137,7 +137,7 @@ export default function Home() {
                   <div className="text-center relative z-10">
                     <div className="relative">
                       <img 
-                        src="/hero_render_green.png" 
+                        src="/Unlokie_new_filled.png" 
                         alt="Unlokie Smart Locker - Three plexiglass doors with green accents, outdoor-ready design"
                         className="w-full max-w-md mx-auto rounded-xl shadow-hero transform group-hover:scale-105 transition-transform duration-500"
                       />
@@ -160,32 +160,8 @@ export default function Home() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-charcoal mb-3">Contactless Unlock</h3>
-                  <p className="text-lg text-slateGray leading-relaxed">Tap your phone to access gear instantly—no keys, no hassle</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-6">
-                <div className="w-12 h-12 bg-forestGreen rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-charcoal mb-3">Real-time Availability</h3>
-                  <p className="text-lg text-slateGray leading-relaxed">See what's available before you head out to play</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-6">
-                <div className="w-12 h-12 bg-unlokieGreen rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-charcoal mb-3">Built to Last</h3>
-                  <p className="text-lg text-slateGray leading-relaxed">Weather-resistant with UV-stable materials for years of use</p>
+                  <h3 className="text-xl font-semibold text-charcoal mb-3">Mobile App</h3>
+                  <p className="text-lg text-slateGray leading-relaxed">Find nearby lockers, see available gear and unlock a compartment with one tap</p>
                 </div>
               </div>
 
@@ -196,8 +172,20 @@ export default function Home() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-charcoal mb-3">Simple Operations</h3>
-                  <p className="text-lg text-slateGray leading-relaxed">Easy maintenance with remote monitoring and battery alerts</p>
+                  <h3 className="text-xl font-semibold text-charcoal mb-3">No Infrastructure Required</h3>
+                  <p className="text-lg text-slateGray leading-relaxed">Fully wireless units mount anywhere—no trenching, no permits, no construction delays</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-6">
+                <div className="w-12 h-12 bg-unlokieGreen rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-charcoal mb-3">Usage Analytics</h3>
+                  <p className="text-lg text-slateGray leading-relaxed">Track when, where, and how your community recreates—real data for better planning</p>
                 </div>
               </div>
                 </div>
@@ -286,25 +274,25 @@ export default function Home() {
             <div className="bg-white rounded-xl p-8 shadow-card hover:shadow-card-hover transition-all duration-200 ease-out hover:animate-card-hover">
               <div className="text-4xl mb-6">🏞️</div>
               <h3 className="text-2xl font-semibold text-charcoal mb-4">Municipal Parks</h3>
-              <p className="text-lg text-slateGray mb-6 leading-relaxed">Increase park utilization and community engagement with accessible shared equipment</p>
+              <p className="text-lg text-slateGray mb-6 leading-relaxed">Activate underused spaces and boost community engagement—no staff or wiring required</p>
               <ul className="space-y-3">
                 <li className="flex items-center text-base text-slateGray">
                   <svg className="w-5 h-5 text-unlokieGreen mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Higher foot traffic
+                  Instant installation—mount anywhere
                 </li>
                 <li className="flex items-center text-base text-slateGray">
                   <svg className="w-5 h-5 text-unlokieGreen mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Community activation
+                  Zero personnel costs
                 </li>
                 <li className="flex items-center text-base text-slateGray">
                   <svg className="w-5 h-5 text-unlokieGreen mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Reduced maintenance
+                  Usage data for planning
                 </li>
               </ul>
             </div>
@@ -312,25 +300,25 @@ export default function Home() {
             <div className="bg-white rounded-xl p-8 shadow-card hover:shadow-card-hover transition-all duration-200 ease-out hover:animate-card-hover">
               <div className="text-4xl mb-6">🎓</div>
               <h3 className="text-2xl font-semibold text-charcoal mb-4">Schools & Universities</h3>
-              <p className="text-lg text-slateGray mb-6 leading-relaxed">Provide students instant access to sports gear without the storage hassles</p>
+              <p className="text-lg text-slateGray mb-6 leading-relaxed">Boost student activity and wellness—equipment available 24/7 without staffing facilities</p>
               <ul className="space-y-3">
                 <li className="flex items-center text-base text-slateGray">
                   <svg className="w-5 h-5 text-unlokieGreen mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Student engagement
+                  After-hours access
                 </li>
                 <li className="flex items-center text-base text-slateGray">
                   <svg className="w-5 h-5 text-unlokieGreen mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Space efficiency
+                  No check-out desk needed
                 </li>
                 <li className="flex items-center text-base text-slateGray">
                   <svg className="w-5 h-5 text-unlokieGreen mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Equipment security
+                  Secure outdoor storage
                 </li>
               </ul>
             </div>
@@ -338,68 +326,79 @@ export default function Home() {
             <div className="bg-white rounded-xl p-8 shadow-card hover:shadow-card-hover transition-all duration-200 ease-out hover:animate-card-hover">
               <div className="text-4xl mb-6">⚽</div>
               <h3 className="text-2xl font-semibold text-charcoal mb-4">Sports Clubs</h3>
-              <p className="text-lg text-slateGray mb-6 leading-relaxed">Enhance member experience with convenient equipment access and sharing</p>
+              <p className="text-lg text-slateGray mb-6 leading-relaxed">Attract more members with 24/7 gear access—no pro shop staff required</p>
               <ul className="space-y-3">
                 <li className="flex items-center text-base text-slateGray">
                   <svg className="w-5 h-5 text-unlokieGreen mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Member convenience
+                  Lower operating costs
                 </li>
                 <li className="flex items-center text-base text-slateGray">
                   <svg className="w-5 h-5 text-unlokieGreen mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Equipment optimization
+                  Always-on availability
                 </li>
                 <li className="flex items-center text-base text-slateGray">
                   <svg className="w-5 h-5 text-unlokieGreen mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  New revenue streams
+                  Rental revenue potential
                 </li>
               </ul>
             </div>
             </div>
           </StaggeredAnimation>
+          
+          {/* Banner Image */}
+          <ScrollAnimation animation="fade-up" delay={400}>
+            <div className="mt-16 flex justify-center">
+              <img 
+                src="/Unlokie_bannner_filled.png" 
+                alt="Unlokie Banner" 
+                className="max-w-4xl w-full h-auto object-contain rounded-xl shadow-lg"
+              />
+            </div>
+          </ScrollAnimation>
         </div>
       </section>
 
       {/* Impact Section */}
       <section id="impact" className="pt-32 pb-16 lg:pb-24 bg-mintGreen/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-display font-bold text-charcoal mb-4">
-              Built for Impact
-            </h2>
-            <p className="text-subhead text-slateGray max-w-2xl mx-auto">
-              Creating more accessible, sustainable communities through smart equipment sharing
-            </p>
-          </div>
+            <div className="text-center mb-16">
+              <h2 className="text-display font-bold text-charcoal mb-4">
+                Why Cities Choose Unlokie
+              </h2>
+              <p className="text-subhead text-slateGray max-w-2xl mx-auto">
+                Turn public spaces into active recreation hubs—no budget for staff or infrastructure required
+              </p>
+            </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <div className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">♿</span>
+                <span className="text-2xl">📊</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Accessibility</h3>
-              <p className="text-lg text-gray-700">Lower barriers to recreation and community participation</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Combat Inactivity</h3>
+              <p className="text-lg text-gray-700">Research shows 85% wouldn't participate in sports without on-site equipment access</p>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 bg-green-200 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🌟</span>
+                <span className="text-2xl">🔌</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Community Activation</h3>
-              <p className="text-lg text-gray-700">Transform underused spaces into vibrant activity hubs</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Zero Infrastructure</h3>
+              <p className="text-lg text-gray-700">Fully wireless units mount to any pole, fence, or wall—no trenching, wiring, or permits</p>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">♻️</span>
+                <span className="text-2xl">⏰</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Equipment Reuse</h3>
-              <p className="text-lg text-gray-700">Maximize utilization and extend equipment lifecycle</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">24/7 Staffless Access</h3>
+              <p className="text-lg text-gray-700">Round-the-clock availability with zero personnel costs or scheduling constraints</p>
             </div>
           </div>
 
@@ -527,7 +526,7 @@ export default function Home() {
             <div className="space-y-3">
               <p className="text-slateGray">
                 <a href="mailto:forms@unlokie.com" className="hover:text-unlokieGreen transition-colors duration-200">
-                  forms@unlokie.com
+                  info@unlokie.com
                 </a>
               </p>
               <p className="text-coolGray text-sm">

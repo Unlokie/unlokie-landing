@@ -45,21 +45,13 @@ export function Navigation() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <a href="#" className="flex items-center space-x-3 group">
-              <div className={`transition-all duration-300 bg-gradient-to-br from-green-500 to-green-700 rounded-xl flex items-center justify-center group-hover:from-green-600 group-hover:to-green-800 shadow-lg ${
-                isScrolled ? 'w-9 h-9' : 'w-11 h-11 lg:w-12 lg:h-12'
-              }`}>
-                <svg className={`text-white transition-all duration-300 ${
-                  isScrolled ? 'w-5 h-5' : 'w-6 h-6 lg:w-7 lg:h-7'
-                }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m0 0v2m0-2h2m-2 0H10m6-4V9a6 6 0 10-12 0v6h12z" />
-                  <circle cx="12" cy="12" r="3" fill="currentColor" />
-                </svg>
-              </div>
-              <span className={`font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent transition-all duration-300 group-hover:from-green-800 group-hover:to-green-600 ${
-                isScrolled ? 'text-lg lg:text-xl' : 'text-xl lg:text-2xl'
-              }`}>
-                Unlokie
-              </span>
+              <img 
+                src="/Unlokie_logo.png" 
+                alt="Unlokie Logo"
+                className={`transition-all duration-300 object-contain ${
+                  isScrolled ? 'h-12' : 'h-16 lg:h-20'
+                }`}
+              />
             </a>
           </div>
 

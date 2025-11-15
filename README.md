@@ -19,12 +19,23 @@ This landing page communicates value and credibility while maintaining confident
 - **Personality**: Sleek, play-full, modern, sustainable
 
 ### Color Palette
-- **Unlokie Green**: `#3CB878`
-- **Sport Blue**: `#1E88E5`
-- **Charcoal**: `#333333`
-- **Cool Light Gray**: `#F4F4F4`
-- **White**: `#FFFFFF`
-- **Gradient**: Linear 180° `#1E88E5` → `#3CB878`
+
+#### Primary Green Palette
+- **Unlokie Green**: `#3CB878` (Primary brand green)
+- **Forest Green**: `#2D8659` (Dark green for depth)
+- **Sage Green**: `#52C882` (Medium green for accents)
+- **Mint Green**: `#A8E6C1` (Light green for backgrounds)
+
+#### Neutral Grays
+- **Charcoal**: `#1F2937` (Dark text/headings)
+- **Slate Gray**: `#4B5563` (Body text)
+- **Cool Gray**: `#9CA3AF` (Subtle text/elements)
+- **Light Gray**: `#F3F4F6` (Light backgrounds)
+- **White**: `#FFFFFF` (Clean contrast)
+
+#### Accent Colors (Minimal use)
+- **Warning Orange**: `#F59E0B` (Alerts/CTAs)
+- **Success Green**: `#10B981` (Success states)
 
 ### Typography
 - **Font**: Montserrat (via Google Fonts)
