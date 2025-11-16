@@ -5,9 +5,12 @@ import { Button } from '@/components/Button'
 import { ContactForm } from '@/components/ContactForm'
 import { ScrollAnimation, StaggeredAnimation } from '@/components/ScrollAnimation'
 import { FloatingElements, GeometricShapes, GradientMesh } from '@/components/FloatingElements'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 
 export default function Home() {
+  const { t } = useLanguage()
+  
   return (
     <>
     <main>
@@ -38,33 +41,33 @@ export default function Home() {
               <div className="mb-8 animate-fade-in">
                 <div className="inline-flex items-center px-4 py-2 rounded-pill bg-unlokieGreen/10 border border-unlokieGreen/20 mb-6">
                   <span className="w-2 h-2 bg-unlokieGreen rounded-full animate-pulse-glow mr-3"></span>
-                  <span className="text-sm font-medium text-unlokieGreen">Pilot programs with Croatian cities in Q1 2026</span>
+                  <span className="text-sm font-medium text-unlokieGreen">{t.hero.badge}</span>
                 </div>
               </div>
               
               <div className="animate-slide-up">
                 <h1 className="text-hero font-bold text-charcoal mb-6 leading-tight tracking-tight">
                   <span className="text-unlokieGreen relative">
-                    Autonomous lockers{' '}
+                    {t.hero.title1}{' '}
                     <div className="absolute -inset-1 rounded-lg -z-10 animate-pulse-glow"></div>
                   </span>
-                  that make sports gear available anywhere
+                  {t.hero.title2}
                 </h1>
               </div>
               
               <div className="animate-slide-up-delayed">
                 <p className="text-subhead text-slateGray mb-12 max-w-2xl mx-auto leading-relaxed">
-                  24/7 access. No staff. No infrastructure, no construction needed.
+                  {t.hero.subtitle}
                 </p>
               </div>
               
               <div className="animate-fade-in-delayed">
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <Button size="lg" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
-                    Request Pilot Program
+                    {t.hero.ctaPrimary}
                   </Button>
                   <Button variant="secondary" size="lg" onClick={() => document.getElementById('product')?.scrollIntoView({ behavior: 'smooth' })}>
-                    Learn More
+                    {t.hero.ctaSecondary}
                   </Button>
                 </div>
               </div>
@@ -77,7 +80,7 @@ export default function Home() {
               <div className="animate-scale-in">
                 <div className="mb-8">
                   <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-unlokieGreen mb-6 tracking-wide animate-float relative inline-block">
-                    Play. Share. Repeat.
+                    {t.hero.tagline}
                     <div className="absolute inset-0 bg-unlokieGreen/5 blur-2xl rounded-lg -z-10 animate-pulse-glow"></div>
                   </div>
                   <div className="w-24 h-2 bg-unlokie-gradient mx-auto rounded-pill mb-8 animate-float-delayed"></div>
@@ -90,7 +93,7 @@ export default function Home() {
                     className="flex flex-col items-center group cursor-pointer transform hover:scale-110 transition-all duration-300"
                     aria-label="Scroll down to learn more"
                   >
-                    <p className="text-sm text-coolGray mb-3 group-hover:text-unlokieGreen transition-colors font-medium">Discover how it works</p>
+                    <p className="text-sm text-coolGray mb-3 group-hover:text-unlokieGreen transition-colors font-medium">{t.hero.scrollText}</p>
                     <div className="relative">
                       <div className="absolute inset-0 bg-unlokieGreen/20 rounded-full blur-md group-hover:blur-lg transition-all duration-300"></div>
                       <svg className="w-8 h-8 text-unlokieGreen group-hover:text-forestGreen transition-colors animate-bounce relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -120,10 +123,10 @@ export default function Home() {
           <ScrollAnimation animation="fade-up">
             <div className="text-center mb-16">
               <h2 className="text-display font-bold text-charcoal mb-4">
-                Deploy in Minutes. Activate Instantly.
+                {t.product.title}
               </h2>
               <p className="text-subhead text-slateGray max-w-2xl mx-auto">
-                Wireless smart lockers + mobile app—the complete solution with zero infrastructure
+                {t.product.subtitle}
               </p>
             </div>
           </ScrollAnimation>
@@ -138,13 +141,13 @@ export default function Home() {
                     <div className="relative">
                       <img 
                         src="/Unlokie_new_filled.png" 
-                        alt="Unlokie Smart Locker - Three plexiglass doors with green accents, outdoor-ready design"
+                        alt={t.product.imageAlt}
                         className="w-full max-w-md mx-auto rounded-xl shadow-hero transform group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute -inset-4 bg-unlokieGreen/10 blur-2xl rounded-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
                     </div>
-                    <div className="text-base text-slateGray mt-6 font-medium">Smart Locker System</div>
-                    <div className="text-sm text-coolGray">Contactless access, weather-resistant design</div>
+                    <div className="text-base text-slateGray mt-6 font-medium">{t.product.imageCaption1}</div>
+                    <div className="text-sm text-coolGray">{t.product.imageCaption2}</div>
                   </div>
                 </div>
               </div>
@@ -160,8 +163,8 @@ export default function Home() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-charcoal mb-3">Mobile App</h3>
-                  <p className="text-lg text-slateGray leading-relaxed">Find nearby lockers, see available gear and unlock a compartment with one tap</p>
+                  <h3 className="text-xl font-semibold text-charcoal mb-3">{t.product.features.app.title}</h3>
+                  <p className="text-lg text-slateGray leading-relaxed">{t.product.features.app.description}</p>
                 </div>
               </div>
 
@@ -172,8 +175,8 @@ export default function Home() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-charcoal mb-3">No Infrastructure Required</h3>
-                  <p className="text-lg text-slateGray leading-relaxed">Fully wireless units mount anywhere—no trenching, no permits, no construction delays</p>
+                  <h3 className="text-xl font-semibold text-charcoal mb-3">{t.product.features.infrastructure.title}</h3>
+                  <p className="text-lg text-slateGray leading-relaxed">{t.product.features.infrastructure.description}</p>
                 </div>
               </div>
 
@@ -184,8 +187,8 @@ export default function Home() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-charcoal mb-3">Usage Analytics</h3>
-                  <p className="text-lg text-slateGray leading-relaxed">Track when, where, and how your community recreates—real data for better planning</p>
+                  <h3 className="text-xl font-semibold text-charcoal mb-3">{t.product.features.analytics.title}</h3>
+                  <p className="text-lg text-slateGray leading-relaxed">{t.product.features.analytics.description}</p>
                 </div>
               </div>
                 </div>
@@ -198,10 +201,10 @@ export default function Home() {
             <div className="mb-20">
               <div className="text-center mb-16">
                 <h3 className="text-heading font-bold text-charcoal mb-4">
-                  How It Works
+                  {t.product.howItWorks.title}
                 </h3>
                 <p className="text-xl text-slateGray">
-                  Four simple steps from discovery to play
+                  {t.product.howItWorks.subtitle}
                 </p>
               </div>
 
@@ -212,8 +215,8 @@ export default function Home() {
                       <div className="absolute inset-0 bg-unlokieGreen rounded-xl blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
                       <span className="relative z-10">1</span>
                     </div>
-                    <h4 className="text-xl font-semibold text-charcoal mb-3 group-hover:text-unlokieGreen transition-colors duration-300">Find</h4>
-                    <p className="text-base text-slateGray leading-relaxed">Locate nearby lockers at schools, clubs, or parks</p>
+                    <h4 className="text-xl font-semibold text-charcoal mb-3 group-hover:text-unlokieGreen transition-colors duration-300">{t.product.howItWorks.steps.find.title}</h4>
+                    <p className="text-base text-slateGray leading-relaxed">{t.product.howItWorks.steps.find.description}</p>
                   </div>
 
                   <div className="text-center group cursor-pointer">
@@ -221,8 +224,8 @@ export default function Home() {
                       <div className="absolute inset-0 bg-forestGreen rounded-xl blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
                       <span className="relative z-10">2</span>
                     </div>
-                    <h4 className="text-xl font-semibold text-charcoal mb-3 group-hover:text-unlokieGreen transition-colors duration-300">Unlock</h4>
-                    <p className="text-base text-slateGray leading-relaxed">Tap your phone to open and access gear</p>
+                    <h4 className="text-xl font-semibold text-charcoal mb-3 group-hover:text-unlokieGreen transition-colors duration-300">{t.product.howItWorks.steps.unlock.title}</h4>
+                    <p className="text-base text-slateGray leading-relaxed">{t.product.howItWorks.steps.unlock.description}</p>
                   </div>
 
                   <div className="text-center group cursor-pointer">
@@ -230,8 +233,8 @@ export default function Home() {
                       <div className="absolute inset-0 bg-unlokieGreen rounded-xl blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
                       <span className="relative z-10">3</span>
                     </div>
-                    <h4 className="text-xl font-semibold text-charcoal mb-3 group-hover:text-unlokieGreen transition-colors duration-300">Play</h4>
-                    <p className="text-base text-slateGray leading-relaxed">Enjoy your game with quality shared equipment</p>
+                    <h4 className="text-xl font-semibold text-charcoal mb-3 group-hover:text-unlokieGreen transition-colors duration-300">{t.product.howItWorks.steps.play.title}</h4>
+                    <p className="text-base text-slateGray leading-relaxed">{t.product.howItWorks.steps.play.description}</p>
                   </div>
 
                   <div className="text-center group cursor-pointer">
@@ -239,8 +242,8 @@ export default function Home() {
                       <div className="absolute inset-0 bg-forestGreen rounded-xl blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
                       <span className="relative z-10">4</span>
                     </div>
-                    <h4 className="text-xl font-semibold text-charcoal mb-3 group-hover:text-unlokieGreen transition-colors duration-300">Return</h4>
-                    <p className="text-base text-slateGray leading-relaxed">Put gear back and help others play too</p>
+                    <h4 className="text-xl font-semibold text-charcoal mb-3 group-hover:text-unlokieGreen transition-colors duration-300">{t.product.howItWorks.steps.return.title}</h4>
+                    <p className="text-base text-slateGray leading-relaxed">{t.product.howItWorks.steps.return.description}</p>
                   </div>
                 </div>
               </StaggeredAnimation>
@@ -261,10 +264,10 @@ export default function Home() {
           <ScrollAnimation animation="fade-up">
             <div className="text-center mb-16">
               <h2 className="text-display font-bold text-charcoal mb-4">
-                Perfect for Every Community
+                {t.useCases.title}
               </h2>
               <p className="text-subhead text-slateGray max-w-2xl mx-auto">
-                From city parks to university campuses, Unlokie activates spaces where people play
+                {t.useCases.subtitle}
               </p>
             </div>
           </ScrollAnimation>
@@ -273,78 +276,78 @@ export default function Home() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl p-8 shadow-card hover:shadow-card-hover transition-all duration-200 ease-out hover:animate-card-hover">
               <div className="text-4xl mb-6">🏞️</div>
-              <h3 className="text-2xl font-semibold text-charcoal mb-4">Municipal Parks</h3>
-              <p className="text-lg text-slateGray mb-6 leading-relaxed">Activate underused spaces and boost community engagement—no staff or wiring required</p>
+              <h3 className="text-2xl font-semibold text-charcoal mb-4">{t.useCases.parks.title}</h3>
+              <p className="text-lg text-slateGray mb-6 leading-relaxed">{t.useCases.parks.description}</p>
               <ul className="space-y-3">
                 <li className="flex items-center text-base text-slateGray">
                   <svg className="w-5 h-5 text-unlokieGreen mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Instant installation—mount anywhere
+                  {t.useCases.parks.benefits.installation}
                 </li>
                 <li className="flex items-center text-base text-slateGray">
                   <svg className="w-5 h-5 text-unlokieGreen mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Zero personnel costs
+                  {t.useCases.parks.benefits.personnel}
                 </li>
                 <li className="flex items-center text-base text-slateGray">
                   <svg className="w-5 h-5 text-unlokieGreen mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Usage data for planning
+                  {t.useCases.parks.benefits.data}
                 </li>
               </ul>
             </div>
 
             <div className="bg-white rounded-xl p-8 shadow-card hover:shadow-card-hover transition-all duration-200 ease-out hover:animate-card-hover">
               <div className="text-4xl mb-6">🎓</div>
-              <h3 className="text-2xl font-semibold text-charcoal mb-4">Schools & Universities</h3>
-              <p className="text-lg text-slateGray mb-6 leading-relaxed">Boost student activity and wellness—equipment available 24/7 without staffing facilities</p>
+              <h3 className="text-2xl font-semibold text-charcoal mb-4">{t.useCases.schools.title}</h3>
+              <p className="text-lg text-slateGray mb-6 leading-relaxed">{t.useCases.schools.description}</p>
               <ul className="space-y-3">
                 <li className="flex items-center text-base text-slateGray">
                   <svg className="w-5 h-5 text-unlokieGreen mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  After-hours access
+                  {t.useCases.schools.benefits.afterHours}
                 </li>
                 <li className="flex items-center text-base text-slateGray">
                   <svg className="w-5 h-5 text-unlokieGreen mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  No check-out desk needed
+                  {t.useCases.schools.benefits.noDesk}
                 </li>
                 <li className="flex items-center text-base text-slateGray">
                   <svg className="w-5 h-5 text-unlokieGreen mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Secure outdoor storage
+                  {t.useCases.schools.benefits.storage}
                 </li>
               </ul>
             </div>
 
             <div className="bg-white rounded-xl p-8 shadow-card hover:shadow-card-hover transition-all duration-200 ease-out hover:animate-card-hover">
               <div className="text-4xl mb-6">⚽</div>
-              <h3 className="text-2xl font-semibold text-charcoal mb-4">Sports Clubs</h3>
-              <p className="text-lg text-slateGray mb-6 leading-relaxed">Attract more members with 24/7 gear access—no pro shop staff required</p>
+              <h3 className="text-2xl font-semibold text-charcoal mb-4">{t.useCases.clubs.title}</h3>
+              <p className="text-lg text-slateGray mb-6 leading-relaxed">{t.useCases.clubs.description}</p>
               <ul className="space-y-3">
                 <li className="flex items-center text-base text-slateGray">
                   <svg className="w-5 h-5 text-unlokieGreen mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Lower operating costs
+                  {t.useCases.clubs.benefits.costs}
                 </li>
                 <li className="flex items-center text-base text-slateGray">
                   <svg className="w-5 h-5 text-unlokieGreen mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Always-on availability
+                  {t.useCases.clubs.benefits.availability}
                 </li>
                 <li className="flex items-center text-base text-slateGray">
                   <svg className="w-5 h-5 text-unlokieGreen mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Rental revenue potential
+                  {t.useCases.clubs.benefits.revenue}
                 </li>
               </ul>
             </div>
@@ -369,10 +372,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-display font-bold text-charcoal mb-4">
-                Why Cities Choose Unlokie
+                {t.impact.title}
               </h2>
               <p className="text-subhead text-slateGray max-w-2xl mx-auto">
-                Turn public spaces into active recreation hubs—no budget for staff or infrastructure required
+                {t.impact.subtitle}
               </p>
             </div>
 
@@ -381,24 +384,24 @@ export default function Home() {
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">📊</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Combat Inactivity</h3>
-              <p className="text-lg text-gray-700">Research shows 85% wouldn't participate in sports without on-site equipment access</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">{t.impact.cards.inactivity.title}</h3>
+              <p className="text-lg text-gray-700">{t.impact.cards.inactivity.description}</p>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 bg-green-200 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🔌</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Zero Infrastructure</h3>
-              <p className="text-lg text-gray-700">Fully wireless units mount to any pole, fence, or wall—no trenching, wiring, or permits</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">{t.impact.cards.infrastructure.title}</h3>
+              <p className="text-lg text-gray-700">{t.impact.cards.infrastructure.description}</p>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">⏰</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">24/7 Staffless Access</h3>
-              <p className="text-lg text-gray-700">Round-the-clock availability with zero personnel costs or scheduling constraints</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">{t.impact.cards.staffless.title}</h3>
+              <p className="text-lg text-gray-700">{t.impact.cards.staffless.description}</p>
             </div>
           </div>
 
@@ -410,30 +413,30 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-display font-bold text-charcoal mb-4">
-              Building Momentum
+              {t.traction.title}
             </h2>
             <p className="text-subhead text-slateGray">
-              Early validation and strategic progress
+              {t.traction.subtitle}
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="text-center bg-green-50 rounded-xl p-6">
-              <div className="text-3xl font-bold text-green-600 mb-2">✓</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Prototype Complete</h3>
-              <p className="text-gray-700">Hardware and software integration tested</p>
+              <div className="text-3xl font-bold text-green-600 mb-2">{t.traction.cards.prototype.number}</div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">{t.traction.cards.prototype.title}</h3>
+              <p className="text-gray-700">{t.traction.cards.prototype.description}</p>
             </div>
 
             <div className="text-center bg-green-50 rounded-xl p-6">
-              <div className="text-3xl font-bold text-green-600 mb-2">3+</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Pilot Discussions</h3>
-              <p className="text-gray-700">Active conversations with potential partners</p>
+              <div className="text-3xl font-bold text-green-600 mb-2">{t.traction.cards.pilots.number}</div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">{t.traction.cards.pilots.title}</h3>
+              <p className="text-gray-700">{t.traction.cards.pilots.description}</p>
             </div>
 
             <div className="text-center bg-green-50 rounded-xl p-6">
-              <div className="text-3xl font-bold text-green-600 mb-2">Q1</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Field Testing</h3>
-              <p className="text-gray-700">Planned deployment for user validation</p>
+              <div className="text-3xl font-bold text-green-600 mb-2">{t.traction.cards.testing.number}</div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">{t.traction.cards.testing.title}</h3>
+              <p className="text-gray-700">{t.traction.cards.testing.description}</p>
             </div>
           </div>
 
@@ -445,10 +448,10 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-display font-bold text-charcoal mb-4">
-              The Team
+              {t.team.title}
             </h2>
             <p className="text-subhead text-slateGray">
-              Domain expertise meets execution focus
+              {t.team.subtitle}
             </p>
           </div>
 
@@ -462,7 +465,7 @@ export default function Home() {
                 />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-1">Roko Gligora</h3>
-              <p className="text-green-600 font-medium">Co-founder</p>
+              <p className="text-green-600 font-medium">{t.team.cofounder}</p>
             </div>
 
             <div className="text-center bg-white rounded-xl p-6 shadow-sm">
@@ -474,7 +477,7 @@ export default function Home() {
                 />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-1">Ian Balen</h3>
-              <p className="text-green-600 font-medium">Co-founder</p>
+              <p className="text-green-600 font-medium">{t.team.cofounder}</p>
             </div>
           </div>
         </div>
@@ -485,10 +488,10 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-display font-bold text-charcoal mb-4">
-              Let&apos;s Connect
+              {t.contact.title}
             </h2>
             <p className="text-subhead text-slateGray">
-              Ready to activate your community spaces with smart equipment sharing?
+              {t.contact.subtitle}
             </p>
           </div>
           
@@ -506,23 +509,23 @@ export default function Home() {
           <div>
             <h3 className="text-xl font-semibold text-charcoal mb-4">Unlokie</h3>
             <p className="text-slateGray leading-relaxed">
-              Smart sports equipment sharing. Play anywhere, anytime.
+              {t.footer.tagline}
             </p>
           </div>
           
           <div>
-            <h4 className="text-lg font-medium text-charcoal mb-4">Quick Links</h4>
+            <h4 className="text-lg font-medium text-charcoal mb-4">{t.footer.quickLinks}</h4>
             <ul className="space-y-3">
-              <li><a href="#product" className="text-slateGray hover:text-unlokieGreen transition-colors duration-200">Product</a></li>
-              <li><a href="#use-cases" className="text-slateGray hover:text-unlokieGreen transition-colors duration-200">Use Cases</a></li>
-              <li><a href="#impact" className="text-slateGray hover:text-unlokieGreen transition-colors duration-200">Impact</a></li>
-              <li><a href="#team" className="text-slateGray hover:text-unlokieGreen transition-colors duration-200">Team</a></li>
-              <li><a href="#contact" className="text-slateGray hover:text-unlokieGreen transition-colors duration-200">Contact</a></li>
+              <li><a href="#product" className="text-slateGray hover:text-unlokieGreen transition-colors duration-200">{t.nav.product}</a></li>
+              <li><a href="#use-cases" className="text-slateGray hover:text-unlokieGreen transition-colors duration-200">{t.nav.useCases}</a></li>
+              <li><a href="#impact" className="text-slateGray hover:text-unlokieGreen transition-colors duration-200">{t.nav.impact}</a></li>
+              <li><a href="#team" className="text-slateGray hover:text-unlokieGreen transition-colors duration-200">{t.nav.team}</a></li>
+              <li><a href="#contact" className="text-slateGray hover:text-unlokieGreen transition-colors duration-200">{t.nav.contact}</a></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-lg font-medium text-charcoal mb-4">Contact</h4>
+            <h4 className="text-lg font-medium text-charcoal mb-4">{t.footer.contactTitle}</h4>
             <div className="space-y-3">
               <p className="text-slateGray">
                 <a href="mailto:forms@unlokie.com" className="hover:text-unlokieGreen transition-colors duration-200">
@@ -530,7 +533,7 @@ export default function Home() {
                 </a>
               </p>
               <p className="text-coolGray text-sm">
-                General inquiries and partnerships
+                {t.footer.inquiries}
               </p>
             </div>
           </div>
@@ -538,7 +541,7 @@ export default function Home() {
         
         <div className="border-t border-gray-200 mt-12 pt-8 text-center">
           <p className="text-coolGray text-sm">
-            © 2025 Unlokie. All rights reserved.
+            {t.footer.rights}
           </p>
         </div>
       </div>
