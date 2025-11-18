@@ -78,13 +78,6 @@ export default function Home() {
           <div className="pb-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
               <div className="animate-scale-in">
-                <div className="mb-8">
-                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-unlokieGreen mb-6 tracking-wide animate-float relative inline-block">
-                    {t.hero.tagline}
-                    <div className="absolute inset-0 bg-unlokieGreen/5 blur-2xl rounded-lg -z-10 animate-pulse-glow"></div>
-                  </div>
-                  <div className="w-24 h-2 bg-unlokie-gradient mx-auto rounded-pill mb-8 animate-float-delayed"></div>
-                </div>
                 
                 {/* Enhanced scroll indicator */}
                 <div className="flex justify-center w-full">
@@ -524,7 +517,7 @@ export default function Home() {
             <h4 className="text-lg font-medium text-charcoal mb-4">{t.footer.contactTitle}</h4>
             <div className="space-y-3">
               <p className="text-slateGray">
-                <a href="mailto:forms@unlokie.com" className="hover:text-unlokieGreen transition-colors duration-200">
+                <a href="mailto:info@unlokie.com" className="hover:text-unlokieGreen transition-colors duration-200">
                   info@unlokie.com
                 </a>
               </p>

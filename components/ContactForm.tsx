@@ -72,7 +72,7 @@ export function ContactForm() {
       
     } catch (error) {
       console.error('Form submission error:', error)
-      alert('There was an error submitting the form. Please try again or contact us directly at forms@unlokie.com')
+      alert('There was an error submitting the form. Please try again or contact us directly at info@unlokie.com')
     } finally {
       setIsSubmitting(false)
     }
@@ -213,33 +213,29 @@ export function ContactForm() {
         </label>
       </div> */}
 
-      <div className="flex flex-col sm:flex-row gap-4">
+      <div className="space-y-4">
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="flex-1"
+          className="w-full"
+          size="lg"
         >
           {isSubmitting ? 'Sending...' : 'Send Message'}
         </Button>
-        <Button
-          type="button"
-          variant="secondary"
-          onClick={() => {
-            const subject = encodeURIComponent(`${formData.name} from ${formData.organization}`)
-            const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nOrganization: ${formData.organization}\n\nMessage:\n${formData.message}`)
-            window.open(`mailto:forms@unlokie.com?subject=${subject}&body=${body}`, '_blank')
-          }}
-          className="flex-1"
-        >
-          Send via Email
-        </Button>
+        
+        <p className="text-sm text-charcoal/60 text-center">
+          We&apos;ll only use your info to reply. No cookies. No tracking pixels.
+          <br />
+          Privacy-friendly analytics help us improve our site.
+          <br />
+          <a 
+            href="mailto:info@unlokie.com" 
+            className="text-unlokieGreen hover:text-forestGreen underline mt-2 inline-block"
+          >
+            Or email us directly at info@unlokie.com
+          </a>
+        </p>
       </div>
-
-      <p className="text-sm text-charcoal/60 text-center">
-        We&apos;ll only use your info to reply. No cookies. No tracking pixels.
-        <br />
-        Privacy-friendly analytics help us improve our site.
-      </p>
     </form>
   )
 }

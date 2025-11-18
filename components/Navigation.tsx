@@ -83,14 +83,17 @@ export function Navigation() {
           <div className="hidden md:flex items-center gap-3">
             <button
               onClick={() => setLanguage(language === 'hr' ? 'en' : 'hr')}
-              className={`flex items-center gap-2 px-3 py-1.5 rounded-lg border-2 border-unlokieGreen/20 hover:border-unlokieGreen/40 transition-all duration-200 ${
+              className={`flex items-center gap-2 px-3 py-2 rounded-lg border-2 border-unlokieGreen/20 hover:border-unlokieGreen/40 transition-all duration-200 group ${
                 isScrolled ? 'text-sm' : 'text-sm lg:text-base'
               }`}
             >
-              <span className="font-semibold text-unlokieGreen">{language.toUpperCase()}</span>
-              <svg className="w-4 h-4 text-unlokieGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
-              </svg>
+              <span className={`font-semibold transition-colors ${
+                language === 'hr' ? 'text-unlokieGreen' : 'text-coolGray'
+              }`}>HR</span>
+              <span className="text-coolGray">/</span>
+              <span className={`font-semibold transition-colors ${
+                language === 'en' ? 'text-unlokieGreen' : 'text-coolGray'
+              }`}>EN</span>
             </button>
             <Button 
               onClick={scrollToContact}
