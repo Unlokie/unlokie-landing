@@ -211,36 +211,32 @@ export default function Home() {
               <StaggeredAnimation staggerDelay={200}>
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
                   <div className="text-center group cursor-pointer">
-                    <div className="w-16 h-16 bg-unlokieGreen text-white rounded-xl flex items-center justify-center text-2xl font-bold mx-auto mb-6 transform group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300 relative">
-                      <div className="absolute inset-0 bg-unlokieGreen rounded-xl blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
-                      <span className="relative z-10">1</span>
+                    <div className="w-20 h-20 mx-auto mb-6 transform group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300 relative">
+                      <img src="/icon1.png" alt="Find" className="w-full h-full object-contain" />
                     </div>
                     <h4 className="text-xl font-semibold text-charcoal mb-3 group-hover:text-unlokieGreen transition-colors duration-300">{t.product.howItWorks.steps.find.title}</h4>
                     <p className="text-base text-slateGray leading-relaxed">{t.product.howItWorks.steps.find.description}</p>
                   </div>
 
                   <div className="text-center group cursor-pointer">
-                    <div className="w-16 h-16 bg-forestGreen text-white rounded-xl flex items-center justify-center text-2xl font-bold mx-auto mb-6 transform group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300 relative">
-                      <div className="absolute inset-0 bg-forestGreen rounded-xl blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
-                      <span className="relative z-10">2</span>
+                    <div className="w-20 h-20 mx-auto mb-6 transform group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300 relative">
+                      <img src="/icon2.png" alt="Unlock" className="w-full h-full object-contain" />
                     </div>
                     <h4 className="text-xl font-semibold text-charcoal mb-3 group-hover:text-unlokieGreen transition-colors duration-300">{t.product.howItWorks.steps.unlock.title}</h4>
                     <p className="text-base text-slateGray leading-relaxed">{t.product.howItWorks.steps.unlock.description}</p>
                   </div>
 
                   <div className="text-center group cursor-pointer">
-                    <div className="w-16 h-16 bg-unlokieGreen text-white rounded-xl flex items-center justify-center text-2xl font-bold mx-auto mb-6 transform group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300 relative">
-                      <div className="absolute inset-0 bg-unlokieGreen rounded-xl blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
-                      <span className="relative z-10">3</span>
+                    <div className="w-20 h-20 mx-auto mb-6 transform group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300 relative">
+                      <img src="/icon3.png" alt="Play" className="w-full h-full object-contain" />
                     </div>
                     <h4 className="text-xl font-semibold text-charcoal mb-3 group-hover:text-unlokieGreen transition-colors duration-300">{t.product.howItWorks.steps.play.title}</h4>
                     <p className="text-base text-slateGray leading-relaxed">{t.product.howItWorks.steps.play.description}</p>
                   </div>
 
                   <div className="text-center group cursor-pointer">
-                    <div className="w-16 h-16 bg-forestGreen text-white rounded-xl flex items-center justify-center text-2xl font-bold mx-auto mb-6 transform group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300 relative">
-                      <div className="absolute inset-0 bg-forestGreen rounded-xl blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
-                      <span className="relative z-10">4</span>
+                    <div className="w-20 h-20 mx-auto mb-6 transform group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300 relative">
+                      <img src="/icon4.png" alt="Return" className="w-full h-full object-contain" />
                     </div>
                     <h4 className="text-xl font-semibold text-charcoal mb-3 group-hover:text-unlokieGreen transition-colors duration-300">{t.product.howItWorks.steps.return.title}</h4>
                     <p className="text-base text-slateGray leading-relaxed">{t.product.howItWorks.steps.return.description}</p>

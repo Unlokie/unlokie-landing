@@ -15,7 +15,7 @@ export const translations = {
     hero: {
       badge: 'Pilot programi s hrvatskim gradovima u Q1 2026',
       title1: 'Autonomni ormarići',
-      title2: 'koji omoguću dostupnost sportske opreme bilo gdje',
+      title2: 'koji omogućuju dostupnost sportske opreme bilo gdje',
       subtitle: '24/7 pristup. Bez osoblja. Bez infrastrukture.',
       ctaPrimary: 'Zatraži pilot program',
       ctaSecondary: 'Saznaj više',
