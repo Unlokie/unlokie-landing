@@ -52,10 +52,9 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  // Google Search Console verification - add real code when needed
-  // verification: {
-  //   google: 'your-actual-verification-code-here',
-  // },
+  verification: {
+   google: 'uThXOnPpb1a6jyTDaMFe9Gp2nnC3sz1u3tc0HYCSH5Q',
+  },
 }
 
 export default function RootLayout({
