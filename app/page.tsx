@@ -133,7 +133,7 @@ export default function Home() {
                   <div className="text-center relative z-10">
                     <div className="relative">
                       <img 
-                        src="/Unlokie_new_filled.png" 
+                        src="/Unlokie_new_filled.webp" 
                         alt={t.product.imageAlt}
                         className="w-full max-w-md mx-auto rounded-xl shadow-hero transform group-hover:scale-105 transition-transform duration-500"
                       />
@@ -347,7 +347,7 @@ export default function Home() {
           <ScrollAnimation animation="fade-up" delay={400}>
             <div className="mt-16 flex justify-center">
               <img 
-                src="/Unlokie_bannner_filled.png" 
+                src="/Unlokie_bannner_filled.webp" 
                 alt="Unlokie Banner" 
                 className="max-w-4xl w-full h-auto object-contain rounded-xl shadow-lg"
               />

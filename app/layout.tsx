@@ -57,6 +57,33 @@ export const metadata: Metadata = {
   },
 }
 
+const siteUrl = 'https://unlokie.com/'
+
+const structuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Unlokie',
+    url: siteUrl,
+    logo: `${siteUrl}Unlokie_logo.png`,
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        contactType: 'sales',
+        email: 'info@unlokie.com',
+        areaServed: 'HR',
+        availableLanguage: ['en', 'hr'],
+      },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Unlokie',
+    url: siteUrl,
+  },
+]
+
 export default function RootLayout({
   children,
 }: {
@@ -65,6 +92,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link rel="icon" href="/Unlokie_favicon.png" type="image/png" />
