@@ -92,14 +92,15 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        <link rel="icon" href="/Unlokie_favicon.png" type="image/png" />
+        <link rel="shortcut icon" href="/Unlokie_favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/Unlokie_favicon.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link rel="icon" href="/Unlokie_favicon.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/Unlokie_favicon.png" />
         <meta name="theme-color" content="#3CB878" />
         <meta name="color-scheme" content="light" />
       </head>
