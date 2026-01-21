@@ -3,7 +3,7 @@ import './globals.css'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
 export const metadata: Metadata = {
-  title: 'Unlokie - Smart Sports Gear, Right Where You Play',
+  title: 'Unlokie - Smart lockers that make sports gear available anywhere',
   description: 'Unlokie places shared equipment in smart lockers at courts and fields—unlocked with a tap. Play. Share. Repeat.',
   keywords: 'smart lockers, sports equipment, sharing economy, outdoor recreation, community activation',
   authors: [{ name: 'Unlokie Team' }],
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Unlokie - Smart Sports Gear, Right Where You Play',
+    title: 'Unlokie - Smart lockers that make sports gear available anywhere',
     description: 'Unlock shared sports gear. Play. Share. Repeat.',
     url: 'https://unlokie.com',
     siteName: 'Unlokie',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Unlokie - Smart Sports Gear, Right Where You Play',
+    title: 'Unlokie - Smart lockers that make sports gear available anywhere',
     description: 'Unlock shared sports gear. Play. Share. Repeat.',
     images: ['/og-image.jpg'],
     creator: '@unlokie',
@@ -92,9 +92,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <link rel="icon" href="/Unlokie_favicon.png" type="image/png" />
-        <link rel="shortcut icon" href="/Unlokie_favicon.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/Unlokie_favicon.png" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon/icon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon/icon-48.png" sizes="48x48" type="image/png" />
+        <link rel="shortcut icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/favicon/icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
