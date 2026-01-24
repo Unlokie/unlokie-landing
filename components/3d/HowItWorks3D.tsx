@@ -64,7 +64,7 @@ export function HowItWorks3D() {
                         <LockerModel />
                         <ContactShadows position={[0, 0, 0.1]} resolution={1024} scale={10} blur={1} opacity={0.5} far={10} color="#000000" />
                     </group>
-                    <Environment preset="city" />
+                    <Environment files="/hdri/potsdamer_platz_1k.hdr" />
                 </Suspense>
 
                 <OrbitControls
