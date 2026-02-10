@@ -3,7 +3,7 @@ import './globals.css'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
 export const metadata: Metadata = {
-  title: 'Unlokie - Smart lockers that make sports gear available anywhere',
+  title: 'Unlokie',
   description: 'Unlokie places shared equipment in smart lockers at courts and fields—unlocked with a tap. Play. Share. Repeat.',
   keywords: 'smart lockers, sports equipment, sharing economy, outdoor recreation, community activation',
   authors: [{ name: 'Unlokie Team' }],
@@ -18,6 +18,16 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon/icon.svg', type: 'image/svg+xml' },
+      { url: '/favicon/icon-48.png', sizes: '48x48', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/favicon/icon.png',
+  },
+  manifest: '/site.webmanifest',
   openGraph: {
     title: 'Unlokie - Smart lockers that make sports gear available anywhere',
     description: 'Unlock shared sports gear. Play. Share. Repeat.',
@@ -59,30 +69,31 @@ export const metadata: Metadata = {
 
 const siteUrl = 'https://unlokie.com/'
 
-const structuredData = [
-  {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Unlokie',
-    url: siteUrl,
-    logo: `${siteUrl}Unlokie_logo.png`,
-    contactPoint: [
-      {
-        '@type': 'ContactPoint',
-        contactType: 'sales',
-        email: 'info@unlokie.com',
-        areaServed: 'HR',
-        availableLanguage: ['en', 'hr'],
-      },
-    ],
-  },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: 'Unlokie',
-    url: siteUrl,
-  },
-]
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      name: 'Unlokie',
+      url: siteUrl,
+      logo: `${siteUrl}Unlokie_logo.png`,
+      contactPoint: [
+        {
+          '@type': 'ContactPoint',
+          contactType: 'sales',
+          email: 'info@unlokie.com',
+          areaServed: 'HR',
+          availableLanguage: ['en', 'hr'],
+        },
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      name: 'Unlokie',
+      url: siteUrl,
+    },
+  ],
+}
 
 export default function RootLayout({
   children,
@@ -92,12 +103,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/favicon/icon.svg" type="image/svg+xml" />
-        <link rel="icon" href="/favicon/icon-48.png" sizes="48x48" type="image/png" />
-        <link rel="shortcut icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/favicon/icon.png" />
-        <link rel="manifest" href="/site.webmanifest" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

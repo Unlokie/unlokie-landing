@@ -2,33 +2,39 @@
   "name": "unlokie-landing",
   "version": "1.0.0",
   "private": true,
+  "packageManager": "pnpm@10.29.1",
+  "engines": {
+    "node": ">=24",
+    "pnpm": ">=10"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "./deploy.sh",
-    "preview": "npm run build && npx serve out"
+    "typecheck": "tsc --noEmit",
+    "preview": "pnpm run build && pnpm run start"
   },
   "dependencies": {
-    "@react-three/drei": "^9.122.0",
-    "@react-three/fiber": "^8.18.0",
-    "framer-motion": "^10.16.16",
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.5.0",
+    "framer-motion": "^12.34.0",
     "lucide-react": "^0.563.0",
-    "next": "14.0.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "next": "16.1.6",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
     "three": "^0.182.0"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20.10.5",
-    "@types/react": "^18.2.45",
-    "@types/react-dom": "^18.2.18",
-    "autoprefixer": "^10.4.16",
-    "eslint": "^8.56.0",
-    "eslint-config-next": "14.0.4",
+    "@types/react": "^19.2.13",
+    "@types/react-dom": "^19.2.3",
+    "@types/three": "^0.182.0",
+    "eslint": "^9.39.2",
+    "eslint-config-next": "16.1.6",
     "postcss": "^8.4.32",
-    "tailwindcss": "^3.3.6",
+    "tailwindcss": "^4",
     "typescript": "^5.3.3"
   }
 }
