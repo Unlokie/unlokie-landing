@@ -7,6 +7,12 @@ interface FloatingElementsProps {
   className?: string
 }
 
+const GEOMETRIC_DOTS = Array.from({ length: 12 }, (_, i) => ({
+  top: `${10 + ((i * 37) % 81)}%`,
+  left: `${5 + ((i * 53) % 91)}%`,
+  animationDelay: `${(i * 0.3).toFixed(1)}s`,
+}))
+
 export function FloatingElements({ count = 3, className = '' }: FloatingElementsProps) {
   const [mounted, setMounted] = useState(false)
   
@@ -80,14 +86,14 @@ export function GeometricShapes() {
       />
       
       {/* Enhanced floating dots */}
-      {[...Array(12)].map((_, i) => (
+      {GEOMETRIC_DOTS.map((dot, i) => (
         <div
           key={i}
           className="absolute w-3 h-3 bg-unlokieGreen/30 rounded-full animate-pulse-glow shadow-lg"
           style={{
-            top: `${10 + Math.random() * 80}%`,
-            left: `${5 + Math.random() * 90}%`,
-            animationDelay: `${i * 0.3}s`,
+            top: dot.top,
+            left: dot.left,
+            animationDelay: dot.animationDelay,
           }}
         />
       ))}

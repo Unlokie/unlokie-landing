@@ -1,6 +1,6 @@
 # Unlokie Landing Page
 
-A production-ready, responsive landing page for Unlokie targeting investors and incubators. Built with Next.js 14, Tailwind CSS, and TypeScript.
+A production-ready, responsive landing page for Unlokie targeting investors and incubators. Built with Next.js 16, Tailwind CSS, and TypeScript.
 
 ## 🎯 Project Overview
 
@@ -52,8 +52,8 @@ This landing page communicates value and credibility while maintaining confident
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js 18+ 
-- npm or yarn package manager
+- Node.js 24
+- pnpm 10
 
 ### Installation
 
@@ -62,10 +62,10 @@ This landing page communicates value and credibility while maintaining confident
 cd landingpage
 
 # Install dependencies
-npm install
+pnpm install
 
 # Start development server
-npm run dev
+pnpm run dev
 ```
 
 Visit `http://localhost:3000` to view the landing page.
@@ -74,14 +74,26 @@ Visit `http://localhost:3000` to view the landing page.
 
 ```bash
 # Build for production
-npm run build
+pnpm run build
 
 # Start production server
-npm start
+pnpm run start
 
-# Export static site (configured for static hosting)
-npm run build
+# Type check
+pnpm run typecheck
 ```
+
+### Self-Hosted Docker Runtime
+
+```bash
+# Build image
+docker build -t unlokie-landing .
+
+# Run container
+docker run --rm -p 3000:3000 unlokie-landing
+```
+
+For production rollout and rollback, use `/SELF_HOST_CUTOVER.md`.
 
 ## 📁 Project Structure
 
@@ -99,7 +111,7 @@ landingpage/
 │   ├── favicon.svg       # Custom Unlokie favicon
 │   ├── favicon.ico      # Standard favicon
 │   └── ASSETS.md        # Asset requirements & guidelines
-├── tailwind.config.ts   # Tailwind config with brand tokens
+├── tailwind.config.js   # Tailwind config with brand tokens
 ├── postcss.config.js    # PostCSS configuration
 ├── next.config.js       # Next.js configuration
 ├── tsconfig.json        # TypeScript configuration
@@ -137,8 +149,8 @@ landingpage/
 ## 🛠 Technical Features
 
 ### Performance & SEO
-- **Next.js 14** with App Router
-- **Static export** ready for CDN deployment
+- **Next.js 16** with App Router
+- **Standalone runtime** ready for self-hosted deployment
 - **SEO optimized** with meta tags, OpenGraph, Twitter cards
 - **Lighthouse 95+** performance target
 - **Core Web Vitals** optimized
@@ -232,19 +244,19 @@ const response = await fetch('/api/contact', {
 ### Available Scripts
 
 ```bash
-npm run dev          # Development server (http://localhost:3000)
-npm run build        # Production build
-npm run start        # Production server
-npm run lint         # ESLint code checking
+pnpm run dev          # Development server (http://localhost:3000)
+pnpm run build        # Production build
+pnpm run start        # Production server
+pnpm run typecheck    # TypeScript check
+pnpm run lint         # ESLint code checking
 ```
 
 ### Environment Setup
 
-No environment variables required for basic functionality. For form integration, add:
+No environment variables required for basic functionality. If needed, add:
 
 ```env
 # .env.local (not included in repo)
-NEXT_PUBLIC_FORM_ENDPOINT=your-form-endpoint
 CONTACT_EMAIL=your-contact-email
 ```
 
@@ -269,13 +281,14 @@ All assets should follow brand guidelines and maintain confidentiality.
 
 ## 🚀 Deployment Options
 
-### Static Hosting (Recommended)
+### Static Hosting (Legacy)
 - **Vercel**: `vercel --prod`
 - **Netlify**: Connect GitHub repo
 - **AWS S3 + CloudFront**: Upload build output
 - **GitHub Pages**: Enable in repository settings
 
-### Server Hosting
+### Server Hosting (Recommended)
+- **Docker + reverse proxy**: Nginx/Caddy/Traefik
 - **Vercel**: Full Next.js support
 - **Railway**: Node.js deployment
 - **DigitalOcean**: App platform

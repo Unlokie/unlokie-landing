@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap&font-display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../tailwind.config.js";
 
 @layer base {
   html {
@@ -34,7 +33,7 @@
            transform transition-all duration-300 ease-out
            hover:scale-[1.02] hover:-translate-y-0.5
            active:animate-button-press
-           focus:outline-none focus:ring-2 focus:ring-unlokieGreen focus:ring-offset-2 focus:ring-opacity-50
+           focus:outline-none focus:ring-2 focus:ring-unlokieGreen/50 focus:ring-offset-2
            relative overflow-hidden;
   }
   
@@ -50,7 +49,7 @@
            hover:bg-unlokieGreen hover:text-white hover:border-unlokieGreen 
            hover:shadow-lg transform hover:scale-[1.02] hover:-translate-y-0.5
            transition-all duration-300 ease-out
-           focus:outline-none focus:ring-2 focus:ring-unlokieGreen focus:ring-offset-2 focus:ring-opacity-50;
+           focus:outline-none focus:ring-2 focus:ring-unlokieGreen/50 focus:ring-offset-2;
   }
   
   /* Enhanced card with sophisticated hover effects */
@@ -240,4 +239,3 @@
     }
   }
 }
-

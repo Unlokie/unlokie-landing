@@ -45,10 +45,7 @@ export function ContactForm() {
     setIsSubmitting(true)
 
     try {
-      // Use Formspree with forms@unlokie.com as the target email
-      const formspreeEndpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT || 'https://formspree.io/f/mldejqgp'
-      
-      const response = await fetch(formspreeEndpoint, {
+      const response = await fetch('/api/contact/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -65,14 +62,19 @@ export function ContactForm() {
       })
       
       if (!response.ok) {
-        throw new Error('Form submission failed')
+        const errorBody = await response.json().catch(() => ({}))
+        const message = typeof errorBody?.error === 'string'
+          ? errorBody.error
+          : 'Form submission failed'
+        throw new Error(message)
       }
       
       setIsSubmitted(true)
       
     } catch (error) {
       console.error('Form submission error:', error)
-      alert('There was an error submitting the form. Please try again or contact us directly at info@unlokie.com')
+      const fallback = 'There was an error submitting the form. Please try again or contact us directly at info@unlokie.com'
+      alert(error instanceof Error ? `${error.message}. ${fallback}` : fallback)
     } finally {
       setIsSubmitting(false)
     }

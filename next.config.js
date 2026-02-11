@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  output: 'standalone',
   trailingSlash: true,
   images: {
     unoptimized: true
   },
   
-  // Security headers handled by _headers file for Cloudflare Pages
+  // Security headers should be configured at the reverse proxy for self-hosted runtime.
   // Compress output
   compress: true,
   

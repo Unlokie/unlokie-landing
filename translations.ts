@@ -14,7 +14,7 @@ export const translations = {
     // Hero Section
     hero: {
       badge: 'Pilot programi s hrvatskim gradovima u Q1 2026',
-      title1: 'Autonomni ormarići',
+      title1: 'Pametni ormarići',
       title2: 'koji omogućuju dostupnost sportske opreme bilo gdje',
       subtitle: '24/7 pristup. Bez osoblja. Bez infrastrukture.',
       ctaPrimary: 'Zatraži pilot program',
@@ -199,7 +199,7 @@ export const translations = {
     // Hero Section
     hero: {
       badge: 'Pilot programs with Croatian cities in Q1 2026',
-      title1: 'Autonomous lockers',
+      title1: 'Smart lockers',
       title2: 'that make sports gear available anywhere',
       subtitle: '24/7 access. No staff. No infrastructure.',
       ctaPrimary: 'Request Pilot Program',
