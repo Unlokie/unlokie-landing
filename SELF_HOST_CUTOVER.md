@@ -17,7 +17,6 @@ This runbook is for moving `unlokie-landing` to self-hosted Docker runtime with 
 | `PORT` | No | `3000` | Container default is `3000`. |
 | `HOSTNAME` | No | `0.0.0.0` | Container default binds all interfaces. |
 | `NEXT_PUBLIC_SITE_URL` | Yes | `https://unlokie.com` | Public canonical site URL. |
-| `NEXT_PUBLIC_FORM_ENDPOINT` | Optional | `https://formspree.io/f/xxxxxxx` | Contact form endpoint. |
 | `CONTACT_EMAIL` | Optional | `forms@unlokie.com` | Operational contact fallback. |
 | `NEXT_TELEMETRY_DISABLED` | Optional | `1` | Set if you want telemetry disabled. |
 
@@ -58,7 +57,6 @@ docker run -d \
   -p 3000:3000 \
   -e NODE_ENV=production \
   -e NEXT_PUBLIC_SITE_URL=https://unlokie.com \
-  -e NEXT_PUBLIC_FORM_ENDPOINT="$NEXT_PUBLIC_FORM_ENDPOINT" \
   -e CONTACT_EMAIL="$CONTACT_EMAIL" \
   registry.example.com/unlokie-landing:$RELEASE_TAG
 ```
@@ -131,7 +129,6 @@ docker run -d \
   -p 3000:3000 \
   -e NODE_ENV=production \
   -e NEXT_PUBLIC_SITE_URL=https://unlokie.com \
-  -e NEXT_PUBLIC_FORM_ENDPOINT="$NEXT_PUBLIC_FORM_ENDPOINT" \
   -e CONTACT_EMAIL="$CONTACT_EMAIL" \
   registry.example.com/unlokie-landing:$PREV_TAG
 ```

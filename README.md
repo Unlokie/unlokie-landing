@@ -253,11 +253,10 @@ pnpm run lint         # ESLint code checking
 
 ### Environment Setup
 
-No environment variables required for basic functionality. For form integration, add:
+No environment variables required for basic functionality. If needed, add:
 
 ```env
 # .env.local (not included in repo)
-NEXT_PUBLIC_FORM_ENDPOINT=your-form-endpoint
 CONTACT_EMAIL=your-contact-email
 ```
 
