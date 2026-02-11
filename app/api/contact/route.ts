@@ -8,6 +8,7 @@ interface ContactPayload {
 }
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mnjbjgdb'
+const FORMSPREE_ORIGIN = 'https://unlokie.com'
 
 function normalize(value: unknown): string {
   return typeof value === 'string' ? value.trim() : ''
@@ -33,6 +34,8 @@ export async function POST(request: Request) {
       headers: {
         'Content-Type': 'application/json',
         Accept: 'application/json',
+        Origin: FORMSPREE_ORIGIN,
+        Referer: `${FORMSPREE_ORIGIN}/`,
       },
       body: JSON.stringify({
         name,
