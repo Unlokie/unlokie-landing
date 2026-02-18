@@ -502,7 +502,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-white border-t border-gray-100 py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
             <div>
               <h3 className="text-xl font-semibold text-charcoal mb-4">Unlokie</h3>
               <p className="text-slateGray leading-relaxed">
@@ -518,6 +518,15 @@ export default function Home() {
                 <li><a href="#impact" className="text-slateGray hover:text-unlokieGreen transition-colors duration-200">{t.nav.impact}</a></li>
                 <li><a href="#team" className="text-slateGray hover:text-unlokieGreen transition-colors duration-200">{t.nav.team}</a></li>
                 <li><a href="#contact" className="text-slateGray hover:text-unlokieGreen transition-colors duration-200">{t.nav.contact}</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="text-lg font-medium text-charcoal mb-4">{t.footer.legalLinks}</h4>
+              <ul className="space-y-3">
+                <li><a href="/privacy-policy" className="text-slateGray hover:text-unlokieGreen transition-colors duration-200">{t.footer.privacyPolicy}</a></li>
+                <li><a href="/cookie-policy" className="text-slateGray hover:text-unlokieGreen transition-colors duration-200">{t.footer.cookiePolicy}</a></li>
+                <li><a href="/terms-and-conditions" className="text-slateGray hover:text-unlokieGreen transition-colors duration-200">{t.footer.termsAndConditions}</a></li>
               </ul>
             </div>
 

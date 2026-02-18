@@ -178,6 +178,10 @@ export const translations = {
     footer: {
       tagline: 'Pametno dijeljenje sportske opreme. Igraj bilo gdje, bilo kada.',
       quickLinks: 'Brze poveznice',
+      legalLinks: 'Pravni dokumenti',
+      privacyPolicy: 'Politika privatnosti',
+      cookiePolicy: 'Politika kolačića',
+      termsAndConditions: 'Uvjeti korištenja',
       contactTitle: 'Kontakt',
       inquiries: 'Opći upiti i partnerstva',
       rights: '© 2025 Unlokie. Sva prava pridržana.'
@@ -361,11 +365,15 @@ export const translations = {
     
     // Footer
     footer: {
-      tagline: 'Smart sports equipment sharing. Play anywhere, anytime.',
+      tagline: 'Play. Share. Repeat.',
       quickLinks: 'Quick Links',
+      legalLinks: 'Legal',
+      privacyPolicy: 'Privacy Policy',
+      cookiePolicy: 'Cookie Policy',
+      termsAndConditions: 'Terms & Conditions',
       contactTitle: 'Contact',
       inquiries: 'General inquiries and partnerships',
-      rights: '© 2025 Unlokie. All rights reserved.'
+      rights: '© 2026 Unlokie. All rights reserved.'
     }
   }
 }
