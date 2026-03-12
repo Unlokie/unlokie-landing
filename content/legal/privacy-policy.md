@@ -132,7 +132,7 @@ When no longer required, personal data is securely deleted or irreversibly anony
 
 Unlokie supports **in-app account deletion requests**. If you can access the app, use the account deletion option inside the app to submit your request.
 
-If you cannot access the app, contact **[support@unlokie.com](mailto:support@unlokie.com)** and we will help you with the request.
+If you cannot access the app, contact **support@unlokie.com** and we will help you with the request.
 
 After a deletion request is accepted:
 
@@ -144,7 +144,7 @@ Some requests may require issue resolution before deletion can be completed, for
 
 We may retain limited records where required for legal or operational obligations, including payments/accounting, fraud prevention, disputes or chargebacks, and security, audit, or other legal compliance purposes. Those records are retained only for those limited purposes, not for ongoing account use.
 
-Further details are available on our **[Account Deletion](https://unlokie.com/account-deletion)** page.
+Further details are available on our Account Deletion page at `unlokie.com/account-deletion`.
 
 ## 11. Your Rights
 

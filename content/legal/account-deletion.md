@@ -5,15 +5,15 @@
 
 This page explains how to request deletion of your Unlokie account and what happens after your request.
 
-## Request Deletion In The App
+## 1. Request Deletion In The App
 
 Unlokie offers **in-app account deletion**. If you can access the app, use the account deletion option inside the Unlokie app to submit your request.
 
-## If You Cannot Access The App
+## 2. If You Cannot Access The App
 
-If you cannot access the app, email **[support@unlokie.com](mailto:support@unlokie.com)** with the subject line **Account Deletion Request** from the email address linked to your account, if possible.
+If you cannot access the app, email **support@unlokie.com** with the subject line **Account Deletion Request** from the email address linked to your account, if possible.
 
-## What Happens After A Request
+## 3. What Happens After A Request
 
 After a deletion request is accepted:
 
@@ -27,7 +27,7 @@ Some requests may require issue resolution before deletion can be completed, for
 - an unresolved return issue;
 - an unresolved payment or recovery obligation.
 
-## What We Delete
+## 4. What We Delete
 
 We delete or irreversibly anonymize personal data associated with your Unlokie account when it is no longer needed for legal or operational reasons. This can include:
 
@@ -36,7 +36,7 @@ We delete or irreversibly anonymize personal data associated with your Unlokie a
 - contact details linked to the account;
 - app usage, session, and support records that do not need to be retained.
 
-## What We May Retain
+## 5. What We May Retain
 
 We may keep limited records where needed for legal or operational obligations, including:
 
@@ -46,6 +46,6 @@ We may keep limited records where needed for legal or operational obligations, i
 
 These retained records are kept only for those limited purposes, not for ongoing account use.
 
-## Need Help
+## 6. Need Help
 
-If you need help with an account deletion request, contact **[support@unlokie.com](mailto:support@unlokie.com)**.
+If you need help with an account deletion request, contact **support@unlokie.com**.

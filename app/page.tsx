@@ -526,6 +526,7 @@ export default function Home() {
               <ul className="space-y-3">
                 <li><a href="/privacy-policy" className="text-slateGray hover:text-unlokieGreen transition-colors duration-200">{t.footer.privacyPolicy}</a></li>
                 <li><a href="/cookie-policy" className="text-slateGray hover:text-unlokieGreen transition-colors duration-200">{t.footer.cookiePolicy}</a></li>
+                <li><a href="/account-deletion" className="text-slateGray hover:text-unlokieGreen transition-colors duration-200">{t.footer.accountDeletion}</a></li>
                 <li><a href="/terms-and-conditions" className="text-slateGray hover:text-unlokieGreen transition-colors duration-200">{t.footer.termsAndConditions}</a></li>
               </ul>
             </div>
