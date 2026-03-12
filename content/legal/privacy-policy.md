@@ -122,13 +122,31 @@ Some providers may process data outside the EEA/UK/Switzerland. Where required, 
 
 We retain personal data only as long as necessary for the purposes in this policy and to comply with legal obligations.
 
-- Account operational data (profile, authentication records, usage history): while your account is active and up to one (1) month after account termination, unless longer retention is required for security, fraud prevention, or legal claims.
+- Account operational data (profile, authentication records, usage history): while your account is active and then deleted or irreversibly anonymized as described in the **Account Deletion** section below, unless longer retention is required for security, fraud prevention, or legal claims.
 - Financial/accounting/transaction records (including invoices): up to ten (10) years under applicable Croatian accounting and tax laws.
 - Security, fraud, and system integrity logs: retained for an extended period where necessary to protect Services, prevent abuse, enforce rights, or comply with law.
 
 When no longer required, personal data is securely deleted or irreversibly anonymized.
 
-## 10. Your Rights
+## 10. Account Deletion
+
+Unlokie supports **in-app account deletion requests**. If you can access the app, use the account deletion option inside the app to submit your request.
+
+If you cannot access the app, contact **[support@unlokie.com](mailto:support@unlokie.com)** and we will help you with the request.
+
+After a deletion request is accepted:
+
+- access to the account is revoked immediately;
+- final deletion is not instant;
+- personal data is deleted or irreversibly anonymized within **30 days** of the request.
+
+Some requests may require issue resolution before deletion can be completed, for example where there is an active rental/session, an unresolved return issue, or an unresolved payment or recovery obligation.
+
+We may retain limited records where required for legal or operational obligations, including payments/accounting, fraud prevention, disputes or chargebacks, and security, audit, or other legal compliance purposes. Those records are retained only for those limited purposes, not for ongoing account use.
+
+Further details are available on our **[Account Deletion](https://unlokie.com/account-deletion)** page.
+
+## 11. Your Rights
 
 Subject to applicable law, you may have the right to:
 
@@ -157,7 +175,7 @@ Marticeva 14
 Croatia  
 https://azop.hr
 
-## 11. Cookies and Device Technologies
+## 12. Cookies and Device Technologies
 
 We use cookies and similar technologies on the website and app technologies (including local app storage) in mobile apps.
 
@@ -165,23 +183,23 @@ Strictly necessary technologies are used only where needed for core service oper
 
 Further details are available in our **Cookie Policy**.
 
-## 12. Children
+## 13. Children
 
 The Services are intended for users aged **18 or older**. We do not knowingly provide Services to children. If we learn that personal data was collected from a child in violation of applicable law, we will delete it and take appropriate account measures.
 
-## 13. Automated Decision-Making
+## 14. Automated Decision-Making
 
 We do not carry out solely automated decision-making (including profiling) that produces legal or similarly significant effects within the meaning of Article 22 GDPR.
 
-## 14. Security
+## 15. Security
 
 We implement reasonable technical and organizational safeguards to protect personal data. No online service can be guaranteed fully secure.
 
-## 15. Changes to This Policy
+## 16. Changes to This Policy
 
 We may update this Privacy Policy from time to time. The latest version and date will be published in the Services.
 
-## 16. Contact
+## 17. Contact
 
 For privacy questions or requests:
 

@@ -2,7 +2,11 @@ import { readFile } from 'fs/promises'
 import path from 'path'
 import { cache } from 'react'
 
-export type LegalDocumentSlug = 'privacy-policy' | 'cookie-policy' | 'terms-and-conditions'
+export type LegalDocumentSlug =
+  | 'privacy-policy'
+  | 'cookie-policy'
+  | 'terms-and-conditions'
+  | 'account-deletion'
 
 type LegalDocument = {
   slug: LegalDocumentSlug
@@ -29,6 +33,12 @@ const LEGAL_DOCUMENTS: LegalDocument[] = [
     fileName: 'terms-and-conditions.md',
     title: 'Terms & Conditions',
     description: 'Rules and legal terms for using Unlokie services.',
+  },
+  {
+    slug: 'account-deletion',
+    fileName: 'account-deletion.md',
+    title: 'Account Deletion',
+    description: 'How to request deletion of your Unlokie account and what happens next.',
   },
 ]
 
